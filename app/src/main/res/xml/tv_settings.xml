@@ -1,0 +1,9 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto" app:title="桌面设置">
+    <PreferenceScreen app:key="default_launcher" app:title="桌面切换说明" app:summary="通过 ADB 切换与恢复默认桌面" app:icon="@drawable/ic_default_launcher">
+        <Preference app:title="切换前" app:summary="确认 Blank Launcher 能正常打开并已连接 ADB。以下以包名为 com.google.android.tvlauncher 的系统桌面为例，其他设备请先确认包名。" app:selectable="false" />
+        <Preference app:title="停用原桌面" app:summary="adb shell pm disable-user --user 0 com.google.android.tvlauncher" app:selectable="false" />
+        <Preference app:title="验证切换" app:summary="按 Home 键并重启，检查是否进入 Blank Launcher。多个桌面或不同系统的行为可能不同。" app:selectable="false" />
+        <Preference app:title="恢复原桌面" app:summary="adb shell pm enable --user 0 com.google.android.tvlauncher\n停用不会卸载原桌面，请保留恢复命令。" app:selectable="false" />
+    </PreferenceScreen>
+    <Preference app:key="version" app:title="版本信息" app:summary="Blank Launcher 0.0.1" app:icon="@drawable/ic_info" app:selectable="false" />
+</PreferenceScreen>
